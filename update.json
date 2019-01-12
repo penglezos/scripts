@@ -1,5 +1,5 @@
 {
-  "newVersion": "1.0.0",
+  "newVersion": "99.0.0",
   "apkUrl": "https://github.com/penglezos/android_kernel_xiaomi_msm8953/releases/download/13.0/Englezos-mido-13.0-20190111.zip",
   "versionNotes": [
   "Rebased the kernel into Pie CAF tag"
