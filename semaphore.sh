@@ -6,3 +6,7 @@ make ARCH=arm64 clean O=output
 make ARCH=arm64 mrproper O=output
 make O=output ARCH=arm64 mido_defconfig
 make -j4 O=output ARCH=arm64 CROSS_COMPILE=/home/runner/mido/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+cd zip
+cp ../output/arch/arm64/boot/Image.gz-dtb .
+zip -r EnglezosKernel anykernel.sh META-INF/ ramdisk/ tools/ Image.gz-dtb
+curl --upload-file ./EnglezosKernel.zip https://transfer.sh/EnglezosKernel.zip
