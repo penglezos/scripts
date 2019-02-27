@@ -1,5 +1,5 @@
 {
-  "newVersion": "15.0",
+  "newVersion": "15.0.0",
   "apkUrl": "https://github.com/penglezos/android_kernel_xiaomi_msm8953/releases/download/15.0/Englezos-mido-15.0-20190212.zip",
   "versionNotes": [
     "Upstreamed Linux version tag: 3.18.134"
