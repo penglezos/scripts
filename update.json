@@ -1,7 +1,14 @@
 {
-  "newVersion": "4.4.0",
-  "apkUrl": "https://example.net/example.apk",
+  "newVersion": "15.0",
+  "apkUrl": "https://github.com/penglezos/android_kernel_xiaomi_msm8953/releases/download/15.0/Englezos-mido-15.0-20190212.zip",
   "versionNotes": [
-    "- Bug fixes"
+    "Upstreamed Linux version tag: 3.18.134"
+    "Upstreamed CAF tag to latest"
+    "Upstreamed Prima tag to latest"
+    "Fixed a critical issue causing some Google Apps not working: network disconnects (blame google api)"
+    "Power on display asynchronously as early as possible"
+    "Reduced autosuspend delay to 50ms"
+    "Power efficiency improvements"
+    "Misc fixes as usual"
   ]
 }
