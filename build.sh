@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright © 2018-2019, "Panagiotis Englezos" <panagiotisegl@gmail.com>
+# Copyright © 2018-2019, "penglezos" <panagiotisegl@gmail.com>
 # Thanks to Vipul Jha for zip creator
 # Android Kernel Compilation Script
 #
@@ -16,23 +16,9 @@ BUILD_START=$(date +"%s")
 KERNEL_DIR=$PWD
 REPACK_DIR=$KERNEL_DIR/zip
 OUT=$KERNEL_DIR/out
-ZIP_NAME="$VERSION"-"$DATE"
-VERSION="device-1.0"
-DATE=`date +"%Y%m%d"`
+VERSION="r16"
 export ARCH=arm64 && export SUBARCH=arm64
-export CROSS_COMPILE="/"
-
-make_zip()
-{
-	cd $REPACK_DIR
-	cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR/
-	FINAL_ZIP="Englezos-${VERSION}-${DATE}.zip"
-	zip -r9 "${FINAL_ZIP}" *
-	cp *.zip $OUT
-	rm *.zip
-	cd $KERNEL_DIR
-	rm zip/Image.gz-dtb
-}
+export CROSS_COMPILE="/home/englezos/kernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
 
 rm -rf out
 mkdir -p out
@@ -40,8 +26,20 @@ make O=out clean
 make O=out mrproper
 make O=out mido_defconfig
 make O=out -j$(nproc --all)
-make_zip
 
+cd $REPACK_DIR
+cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR/
+FINAL_ZIP="EnglezosKernel-${VERSION}.zip"
+zip -r9 "${FINAL_ZIP}" *
+cp *.zip $OUT
+rm *.zip
+cd $KERNEL_DIR
+rm zip/Image.gz-dtb
+
+if [ -f out/arch/arm64/boot/"Image.gz-dtb" ]; then
 BUILD_END=$(date +"%s")
 DIFF=$(($BUILD_END - $BUILD_START))
 echo -e "Build completed in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds."
+else
+echo "$(tput setaf 1) Build Failed. $(tput sgr 0)"
+fi
