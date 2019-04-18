@@ -2,7 +2,7 @@
 #
 # Copyright © 2019, "penglezos" <panagiotisegl@gmail.com>
 # Android ROM build script
-# Thanks to Ali Hasan and Barny
+# Thanks to: @AliHasan7671, @kondors1995, @AryanKedare
 #
 
 tput reset
