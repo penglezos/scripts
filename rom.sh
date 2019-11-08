@@ -5,7 +5,7 @@ repo sync -f --force-sync --no-tags --no-clone-bundle
 git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git packages/resources/devicesettings
 
 git clone https://github.com/TheScarastic/android_device_xiaomi_raphael.git -b lineage-16.0 device/xiaomi/raphael
-git clone https://github.com/TheScarastic/proprietary_vendor_xiaomi.git -b lineage-16.0 vendor/xiaomi
+git clone https://github.com/TheScarastic/proprietary_vendor_xiaomi.git -b lineage-16.0-raphael vendor/xiaomi
 
 source build/envsetup.sh
 export USE_CCACHE=1
