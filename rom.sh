@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repo init -u git://github.com/LineageOS/android.git -b lineage-16.0
+repo init -u git://github.com/LineageOS/android.git -b lineage-17.0
 repo sync -f --force-sync --no-tags --no-clone-bundle
 git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git packages/resources/devicesettings
 
