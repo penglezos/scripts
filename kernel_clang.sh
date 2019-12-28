@@ -12,7 +12,10 @@ export CLANG_TRIPLE=aarch64-linux-gnu-
 export CROSS_COMPILE=/home/home/tools/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 export CROSS_COMPILE_ARM32=/home/home/tools/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 export LD_LIBRARY_PATH=${HOME}/tools/clang/aosp/clang/lib64:$LD_LIBRARY_PATH
+VERSION='r1'
 KERNEL_DIR=`pwd`
+REPACK_DIR=$KERNEL_DIR/AnyKernel3
+OUT=$KERNEL_DIR/out
 
 function make_kernel {
 		echo
@@ -48,6 +51,19 @@ case "$dchoice" in
 		;;
 esac
 done
+
+cd $REPACK_DIR
+cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR
+cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150-v2.dtb $REPACK_DIR/dtbs
+cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150p.dtb $REPACK_DIR/dtbs
+cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150.dtb $REPACK_DIR/dtbs
+cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150p-v2.dtb $REPACK_DIR/dtbs
+FINAL_ZIP="EnglezosKernel-${VERSION}.zip"
+zip -r9 "${FINAL_ZIP}" *
+cp *.zip $OUT
+rm *.zip
+cd $KERNEL_DIR
+rm AnyKernel3/Image.gz-dtb
 
 DATE_END=$(date +"%s")
 DIFF=$(($DATE_END - $DATE_START))
