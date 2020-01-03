@@ -54,10 +54,6 @@ done
 
 cd $REPACK_DIR
 cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR
-cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150-v2.dtb $REPACK_DIR/dtbs
-cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150p.dtb $REPACK_DIR/dtbs
-cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150.dtb $REPACK_DIR/dtbs
-cp $KERNEL_DIR/out/arch/arm64/boot/dts/qcom/sm8150p-v2.dtb $REPACK_DIR/dtbs
 FINAL_ZIP="EnglezosKernel-${VERSION}.zip"
 zip -r9 "${FINAL_ZIP}" *
 cp *.zip $OUT
