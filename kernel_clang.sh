@@ -16,50 +16,17 @@ VERSION='r1'
 KERNEL_DIR=`pwd`
 REPACK_DIR=$KERNEL_DIR/AnyKernel3
 OUT=$KERNEL_DIR/out
-
-function make_kernel {
-		echo
-		make O=out CC=clang raphael_defconfig
-		make O=out CC=clang -j$(grep -c ^processor /proc/cpuinfo)
-
-}
+DATE=`date +"%Y%m%d-%H%M"`
 DATE_START=$(date +"%s")
 
-# Vars
-DATE=`date +"%Y%m%d-%H%M"`
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=penglezos
 export KBUILD_BUILD_HOST=box
 
-echo
-
-while read -p "Do you want to build?" dchoice
-do
-case "$dchoice" in
-	y|Y )
-		make_kernel
-		break
-		;;
-	n|N )
-		break
-		;;
-	* )
-		echo
-		echo "Invalid try again!"
-		echo
-		;;
-esac
-done
-
-cd $REPACK_DIR
-cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR
-FINAL_ZIP="EnglezosKernel-${VERSION}.zip"
-zip -r9 "${FINAL_ZIP}" *
-cp *.zip $OUT
-rm *.zip
-cd $KERNEL_DIR
-rm AnyKernel3/Image.gz-dtb
+rm -rf out
+make O=out CC=clang raphael_defconfig
+make O=out CC=clang -j$(grep -c ^processor /proc/cpuinfo)
 
 DATE_END=$(date +"%s")
 DIFF=$(($DATE_END - $DATE_START))
