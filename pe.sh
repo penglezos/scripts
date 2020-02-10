@@ -4,4 +4,4 @@ repo init -u https://github.com/PixelExperience/manifest -b ten
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 . build/envsetup.sh
 lunch aosp_raphael-userdebug
-mka bacon -j8
+make bacon -j$(nproc --all)
