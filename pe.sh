@@ -22,7 +22,6 @@ case "$cchoice" in
 esac
 done
 
-
 # Sync with my changes
 while read -p "Do you want to sync your changes (y/n)? " cchoice
 do
@@ -46,6 +45,22 @@ esac
 done
 
 # Compile
-. build/envsetup.sh
-lunch aosp_raphael-userdebug
-make bacon -j$(nproc --all)
+while read -p "Do you want to compile (y/n)? " cchoice
+do
+case "$cchoice" in
+	y|Y )
+		. build/envsetup.sh
+        lunch aosp_raphael-userdebug
+        make bacon -j$(nproc --all)
+		break
+		;;
+	n|N )
+		break
+		;;
+	* )
+		echo
+		echo "Invalid try again!"
+		echo
+		;;
+esac
+done
