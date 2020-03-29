@@ -10,6 +10,7 @@ export KBUILD_BUILD_USER=penglezos
 export KBUILD_BUILD_HOST=pc
 export ARCH=arm64
 export SUBARCH=arm64
+export KBUILD_COMPILER_STRING=$($CLANG_PATH/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 export CLANG_PATH=${HOME}/tools/clang/bin
 export PATH=${CLANG_PATH}:${PATH}
 export CLANG_TRIPLE=aarch64-linux-gnu-
@@ -39,3 +40,4 @@ rm AnyKernel3/Image.gz-dtb
 DATE_END=$(date +"%s")
 DIFF=$(($DATE_END - $DATE_START))
 echo "Build completed in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds."
+echo
