@@ -4,6 +4,7 @@ set -e
 source build/envsetup.sh
 
 # fod
+repopick 2482
 repopick 2565
 repopick 2566
 repopick 2568
