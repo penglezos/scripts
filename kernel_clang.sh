@@ -11,8 +11,6 @@ VERSION='0.4'
 KERNEL_DIR=`pwd`
 REPACK_DIR=$KERNEL_DIR/AnyKernel3
 OUT=$KERNEL_DIR/out
-DATE=`date +"%Y%m%d-%H%M"`
-DATE_START=$(date +"%s")
 
 rm -rf out
 make O=out CC=clang raphael_defconfig
@@ -26,8 +24,4 @@ cp *.zip $OUT
 rm *.zip
 cd $KERNEL_DIR
 rm AnyKernel3/Image.gz-dtb
-
-DATE_END=$(date +"%s")
-DIFF=$(($DATE_END - $DATE_START))
-echo "Build completed in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds."
-echo
+echo "Done!"
