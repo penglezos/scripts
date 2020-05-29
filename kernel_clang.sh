@@ -1,13 +1,4 @@
 #!/bin/bash
-rm .version
-
-clear
-echo -e "==============================================="
-echo    "         Compiling Englezos Kernel             "
-echo -e "==============================================="
-
-export KBUILD_BUILD_USER=penglezos
-export KBUILD_BUILD_HOST=pc
 export ARCH=arm64
 export SUBARCH=arm64
 export CLANG_PATH=${HOME}/tools/clang/bin
@@ -16,7 +7,7 @@ export CLANG_TRIPLE=aarch64-linux-gnu-
 export CROSS_COMPILE=${HOME}/tools/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 export CROSS_COMPILE_ARM32=${HOME}/tools/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 export LD_LIBRARY_PATH=${HOME}/tools/clang/lib64:$LD_LIBRARY_PATH
-VERSION='0.3'
+VERSION='0.4'
 KERNEL_DIR=`pwd`
 REPACK_DIR=$KERNEL_DIR/AnyKernel3
 OUT=$KERNEL_DIR/out
