@@ -14,7 +14,7 @@ OUT=$KERNEL_DIR/out
 
 rm -rf out
 make O=out CC=clang raphael_defconfig
-make O=out CC=clang -j$(grep -c ^processor /proc/cpuinfo)
+make O=out CC=clang -j$(nproc --all)
 
 cd $REPACK_DIR
 cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR/
