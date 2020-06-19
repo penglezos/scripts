@@ -9,7 +9,7 @@ export CROSS_COMPILE_ARM32=${HOME}/tools/arm-linux-androideabi-4.9/bin/arm-linux
 export LD_LIBRARY_PATH=${HOME}/tools/clang/lib64:$LD_LIBRARY_PATH
 VERSION='0.4'
 KERNEL_DIR=`pwd`
-REPACK_DIR=$KERNEL_DIR/AnyKernel3
+REPACK_DIR=$KERNEL_DIR/AK
 OUT=$KERNEL_DIR/out
 
 rm -rf out
@@ -23,5 +23,5 @@ zip -r9 "${FINAL_ZIP}" *
 cp *.zip $OUT
 rm *.zip
 cd $KERNEL_DIR
-rm AnyKernel3/Image.gz-dtb
+rm AK/Image.gz-dtb
 echo "Done!"
