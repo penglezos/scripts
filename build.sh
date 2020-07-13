@@ -12,7 +12,7 @@ date=`date +"%Y%m%d-%H%M"`
 BUILD_START=$(date +"%s")
 VERSION='0.4'
 KERNEL_DIR=`pwd`
-REPACK_DIR=$KERNEL_DIR/AK
+REPACK_DIR=$KERNEL_DIR/AnyKernel3
 OUT=$KERNEL_DIR/out
 
 rm -rf out
@@ -26,7 +26,7 @@ zip -r9 "${FINAL_ZIP}" *
 cp *.zip $OUT
 rm *.zip
 cd $KERNEL_DIR
-rm AK/Image.gz-dtb
+rm AnyKernel3/Image.gz-dtb
 
 BUILD_END=$(date +"%s")	
 DIFF=$(($BUILD_END - $BUILD_START))	
