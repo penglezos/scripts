@@ -4,6 +4,10 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/penglezos/device_xiaomi_raphael -b lineage-18.1 device/xiaomi/raphael
 git clone https://github.com/raphael-development/proprietary_vendor_xiaomi vendor/xiaomi/
 
+
+ccache -M 50G
+export USE_CCACHE=1
+export CCACHE_EXEC=$(command -v ccache)
 . build/envsetup.sh
 lunch lineage_raphael-userdebug
 export LC_ALL=C
