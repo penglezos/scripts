@@ -1,8 +1,8 @@
 #!/bin/bash
 repo init -u git://github.com/LineageOS/android.git -b lineage-18.1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-git clone https://github.com/penglezos/device_xiaomi_raphael -b lineage-18.1 device/xiaomi/raphael
-git clone https://github.com/raphael-development/proprietary_vendor_xiaomi vendor/xiaomi/
+git clone https://github.com/penglezos/device_xiaomi_raphael device/xiaomi/raphael
+git clone https://github.com/raphael-development/proprietary_vendor_xiaomi vendor/xiaomi/raphael
 
 
 ccache -M 50G
