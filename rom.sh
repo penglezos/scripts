@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# Setup Git profile.
+git config --global user.name "penglezos"
+git config --global user.email "panagiotisegl@gmail.com"
+
+# Initialize LineageOS and device files.
 repo init -u git://github.com/LineageOS/android.git -b lineage-18.1
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/penglezos/device_xiaomi_raphael device/xiaomi/raphael
@@ -6,6 +12,7 @@ git clone https://github.com/penglezos/vendor_xiaomi_raphael vendor/xiaomi/rapha
 git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
 
 
+# Set build enviroment and build.
 ccache -M 50G
 export USE_CCACHE=1
 export CCACHE_EXEC=$(command -v ccache)
