@@ -21,4 +21,4 @@ export CCACHE_EXEC=$(command -v ccache)
 . build/envsetup.sh
 lunch lineage_raphael-userdebug
 export LC_ALL=C
-make bacon -j$(nproc --all)
+make bacon
