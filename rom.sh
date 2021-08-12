@@ -12,6 +12,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 git clone https://github.com/penglezos/device_xiaomi_raphael device/xiaomi/raphael
 git clone https://github.com/penglezos/vendor_xiaomi_raphael vendor/xiaomi/raphael
 git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
+git clone https://github.com/penglezos/device_xiaomi_raphael-sepolicy device/xiaomi/raphael-sepolicy
 
 # Set build enviroment and build.
 ccache -M 50G
