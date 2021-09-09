@@ -11,7 +11,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 # Initialize device files.
 git clone https://github.com/EnglezosRaphael/device_xiaomi_raphael device/xiaomi/raphael
 git clone https://github.com/EnglezosRaphael/vendor_xiaomi_raphael vendor/xiaomi/raphael
-git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
+git clone https://github.com/EnglezosRaphael/android_kernel_xiaomi_raphael kernel/xiaomi/raphael
 
 # Set build enviroment and build.
 ccache -M 50G
