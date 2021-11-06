@@ -17,7 +17,7 @@ git clone https://github.com/EnglezosRaphael/vendor_xiaomi_raphael vendor/xiaomi
 git clone https://github.com/EnglezosRaphael/kernel_xiaomi_raphael kernel/xiaomi/raphael
 
 # Set build enviroment and build.
-ccache -M 100G
+ccache -M 50G
 export USE_CCACHE=1
 export CCACHE_EXEC=$(command -v ccache)
 export LC_ALL=C
