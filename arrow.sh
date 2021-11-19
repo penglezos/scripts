@@ -26,6 +26,7 @@ function build {
 	export USE_CCACHE=1
 	export CCACHE_EXEC=$(command -v ccache)
 	export LC_ALL=C
+	export ARROW_GAPPS=true
 	source build/envsetup.sh
 	lunch arrow_raphael-userdebug
 	make bacon -j16
