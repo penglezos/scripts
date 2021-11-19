@@ -83,9 +83,6 @@ do
 case "$cchoice" in
 	y|Y )
 		build
-		echo
-		echo "ROM built successfully."
-		break
 		;;
 	n|N )
 		break
