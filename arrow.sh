@@ -30,7 +30,7 @@ function build {
 	export ARROW_GAPPS=true
 	source build/envsetup.sh
 	lunch arrow_raphael-userdebug
-	make bacon -j16
+	make bacon
 }
 
 echo "Android ROM build script"
