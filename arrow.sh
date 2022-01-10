@@ -16,7 +16,6 @@ function sync_device {
 	rm -rf device/xiaomi/
 	rm -rf vendor/xiaomi/
 	rm -rf kernel/xiaomi/
-	git clone https://github.com/ArrowOS-Devices/android_device_xiaomi_extras device/xiaomi/extras
 	git clone https://github.com/penglezos/device_xiaomi_raphael device/xiaomi/raphael
 	git clone https://github.com/penglezos/vendor_xiaomi_raphael vendor/xiaomi/raphael
 	git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
