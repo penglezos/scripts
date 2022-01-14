@@ -21,7 +21,7 @@ make O=out CC=clang -j$(nproc --all)
 
 cd $REPACK_DIR
 cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR/
-FINAL_ZIP="Englezos-raphael-${VERSION}.zip"
+FINAL_ZIP="EnglezosKernel-raphael-${VERSION}.zip"
 zip -r9 "${FINAL_ZIP}" *
 cp *.zip $OUT
 rm *.zip
