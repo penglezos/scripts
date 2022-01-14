@@ -12,6 +12,11 @@ function sync_rom {
 	repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 }
 
+function repo_pick {
+    source build/envsetup.sh
+    repopick -t twelve-sepol # Sepolicy fixes
+}
+
 function sync_device {
 	rm -rf device/xiaomi/
 	rm -rf vendor/xiaomi/
@@ -43,6 +48,28 @@ case "$cchoice" in
 		sync_rom
 		echo
 		echo "All files are synced successfully."
+		break
+		;;
+	n|N )
+		break
+		;;
+	* )
+		echo
+		echo "Invalid try again!"
+		echo
+		;;
+esac
+done
+
+echo
+
+while read -p "Do you want to pick changes (y/n)? " cchoice
+do
+case "$cchoice" in
+	y|Y )
+		repo_pick
+		echo
+		echo "All changes are picked successfully."
 		break
 		;;
 	n|N )
