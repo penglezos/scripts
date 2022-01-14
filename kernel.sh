@@ -11,7 +11,7 @@ LC_ALL=C date +%Y-%m-%d
 date=`date +"%Y%m%d-%H%M"`	
 BUILD_START=$(date +"%s")
 DEVICE='raphael'
-VERSION='0.'
+DATE=`date +"%Y%m%d"`
 KERNEL_DIR=`pwd`
 REPACK_DIR=$KERNEL_DIR/AnyKernel3
 OUT=$KERNEL_DIR/out
@@ -22,7 +22,7 @@ make O=out CC=clang -j$(nproc --all)
 
 cd $REPACK_DIR
 cp $KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb $REPACK_DIR/
-FINAL_ZIP="EnglezosKernel-${DEVICE}-${VERSION}.zip"
+FINAL_ZIP="EnglezosKernel-${DEVICE}-${DATE}.zip"
 zip -r9 "${FINAL_ZIP}" *
 cp *.zip $OUT
 rm *.zip
