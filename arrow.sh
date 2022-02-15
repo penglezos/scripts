@@ -106,6 +106,7 @@ do
 case "$cchoice" in
 	y|Y )
 		build
+		break
 		;;
 	n|N )
 		break
