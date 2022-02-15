@@ -14,7 +14,6 @@ function sync_rom {
 
 function repo_pick {
     source build/envsetup.sh
-    repopick -t twelve-sepol # Sepolicy fixes
 }
 
 function sync_device {
