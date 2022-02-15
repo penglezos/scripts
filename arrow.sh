@@ -46,8 +46,6 @@ do
 case "$cchoice" in
 	y|Y )
 		sync_rom
-		echo
-		echo "All files are synced successfully."
 		break
 		;;
 	n|N )
@@ -68,8 +66,6 @@ do
 case "$cchoice" in
 	y|Y )
 		repo_pick
-		echo
-		echo "All changes are picked successfully."
 		break
 		;;
 	n|N )
@@ -90,8 +86,6 @@ do
 case "$cchoice" in
 	y|Y )
 		sync_device
-		echo
-		echo "All files are synced successfully."
 		break
 		;;
 	n|N )
