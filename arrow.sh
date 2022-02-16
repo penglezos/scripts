@@ -14,6 +14,7 @@ function sync_rom {
 
 function repo_pick {
     source build/envsetup.sh
+    repopick 16435 # display configs path for AOSP configuration
 }
 
 function sync_device {
