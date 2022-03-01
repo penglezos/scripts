@@ -32,7 +32,6 @@ function build {
 	export CCACHE_EXEC=$(command -v ccache)
 	export LC_ALL=C
 	export ARROW_GAPPS=true
-	#export SELINUX_IGNORE_NEVERALLOWS=true
 	source build/envsetup.sh
 	lunch arrow_raphael-userdebug
 	make bacon
