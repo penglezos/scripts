@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Setup Git profile.
-git config --global user.name "penglezos"
-git config --global user.email "panagiotisegl@gmail.com"
-
 function sync_rom {
 	repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-12.1
 	repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
