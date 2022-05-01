@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export USERNAME=penglezos
-export HOSTNAME=home
-
 # Setup Git profile.
 git config --global user.name "penglezos"
 git config --global user.email "panagiotisegl@gmail.com"
