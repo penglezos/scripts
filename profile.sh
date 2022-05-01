@@ -2,6 +2,7 @@
 
 git config --global user.name "penglezos"
 git config --global user.email "panagiotisegl@gmail.com"
+git config --global review.review.arrowos.net.username "penglezos"
 
 git config --global alias.cp 'cherry-pick'
 git config --global alias.c 'commit'
