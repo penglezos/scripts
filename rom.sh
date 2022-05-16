@@ -6,7 +6,7 @@ function sync_rom {
 }
 
 function repo_pick {
-    source build/envsetup.sh
+    #source build/envsetup.sh
 }
 
 function sync_device {
