@@ -6,7 +6,8 @@ function sync_rom {
 }
 
 function repo_pick {
-    #source build/envsetup.sh
+    source build/envsetup.sh
+    repopick -t twelve-launcher3-hidden
 }
 
 function sync_device {
