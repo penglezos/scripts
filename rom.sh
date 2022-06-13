@@ -11,7 +11,7 @@ function repo_pick {
 }
 
 function sync_device {
-	rm -rf hardware/xiaomi
+	rm -rf hardware/xiaomi/
 	rm -rf device/xiaomi/
 	rm -rf vendor/xiaomi/
 	rm -rf kernel/xiaomi/
