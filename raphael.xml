@@ -10,6 +10,6 @@
   <project name="penglezos/kernel_xiaomi_raphael" path="kernel/xiaomi/raphael" remote="ssh" />
 
   <!-- The vendor repository containing proprietary files required for raphael -->
-  <project name="penglezos/vendor/xiaomi/raphael" path="vendor/xiaomi/raphael" remote="ssh" />
+  <project name="penglezos/vendor_xiaomi_raphael" path="vendor/xiaomi/raphael" remote="ssh" />
 
 </manifest>
