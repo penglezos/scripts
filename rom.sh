@@ -8,7 +8,6 @@ function sync_rom {
 function repo_pick {
     source build/envsetup.sh
     repopick -t twelve-launcher3-hidden
-    repopick 17193
 }
 
 function sync_device {
