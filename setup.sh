@@ -13,6 +13,11 @@ git config --global alias.rc 'revert --no-commit'
 # Install necessary packages
 sudo pacman -S firefox git code htop neofetch 
 
+# Install yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 # Set swap
 sudo swapoff -a
 sudo dd if=/dev/zero of=/swapfile bs=1G count=16
