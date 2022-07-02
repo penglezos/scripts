@@ -11,7 +11,7 @@ git config --global alias.r 'revert'
 git config --global alias.rc 'revert --no-commit'
 
 # Install necessary packages
-sudo pacman -S firefox git code htop neofetch 
+sudo pacman -S firefox git code htop neofetch telegram-desktop
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git
