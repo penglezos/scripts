@@ -18,6 +18,9 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+# AUR packages
+sudo yay -S google-chrome chrome-gnome-shell
+
 # Set swap
 sudo swapoff -a
 sudo dd if=/dev/zero of=/swapfile bs=1G count=16
