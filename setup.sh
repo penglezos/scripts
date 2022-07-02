@@ -15,3 +15,6 @@ git config --global alias.ck 'checkout'
 git config --global alias.r 'revert'
 git config --global alias.rc 'revert --no-commit'
 git config --global alias.p 'push'
+
+# Install necessary packages
+sudo pacman -S firefox git code htop neofetch 
