@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function sync_rom {
-	repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-12.1
+	repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-13.0
 	repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 }
 
