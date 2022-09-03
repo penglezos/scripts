@@ -19,9 +19,9 @@ function sync_device {
 }
 
 function build {
-	ccache -M 50G
+	#ccache -M 50G
 	export USE_CCACHE=1
-	export CCACHE_EXEC=$(command -v ccache)
+	#export CCACHE_EXEC=$(command -v ccache)
 	export LC_ALL=C
 	export ARROW_GAPPS=true
 	#export SELINUX_IGNORE_NEVERALLOWS=true
