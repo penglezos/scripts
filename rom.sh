@@ -7,6 +7,7 @@ function sync_rom {
 
 function repo_pick {
     source build/envsetup.sh
+    repopick -t thirteen-udfps
 }
 
 function sync_device {
