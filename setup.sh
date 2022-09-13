@@ -23,7 +23,7 @@ cd yay
 makepkg -si
 
 # AUR packages
-sudo yay -S google-chrome chrome-gnome-shell
+sudo yay -S google-chrome chrome-gnome-shell spotify
 
 # Set swap
 sudo swapoff -a
