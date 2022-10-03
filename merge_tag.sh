@@ -113,8 +113,33 @@ function merge_techpack() {
     fi
 }
 
+# techpack
+function merge_techpack_data() {
+    echo "Merging techpack data"
+    if ! git remote add techpack-data https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/data-kernel; then
+        git remote rm techpack-data
+        git remote add techpack-data https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/data-kernel
+    fi
+
+    git fetch techpack-data $TAG
+
+    if [[ ${INITIAL_MERGE} = true ]]; then
+        git merge -s ours --no-commit --allow-unrelated-histories FETCH_HEAD
+        git read-tree --prefix=techpack/data -u FETCH_HEAD
+        git commit -m "techpack-data: Merge tag '$TAG'"
+        echo "Merged techpack-data tag succesfully!"
+    else
+        if ! git merge -X subtree=techpack/audio FETCH_HEAD --log; then
+            echo "Merge failed!" && exit 1
+        else
+            echo "Merged techpack-data tag sucessfully!"
+        fi
+    fi
+}
+
 # initialize script
 merge_qcacld
 merge_fw_api
 merge_qca_wifi_host_cmn
 merge_techpack
+merge_techpack_data
