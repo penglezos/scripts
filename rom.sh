@@ -1,26 +1,38 @@
 #!/bin/bash
+#
+# Copyright (C) 2019-2022 penglezos <panagiotisegl@gmail.com    >
+#
+# Android Build script 
+#
 
-function sync_rom {
-	repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-13.0
+echo -e "==============================================="
+echo    "         Android Build script                  "
+echo -e "==============================================="
+echo -e
+echo -e "Available options:\n1.Sync ROM\n2.Pick gerrit changes\n3.Sync device trees\n4.Build ROM\n5.Build Kernel"
+read -p "Your choice: " num
+case $num in 
+    1|2|3|4|5)
+esac
+
+if [ $num = '1' ]; then
+    repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-13.0
 	repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-}
 
-function repo_pick {
+    elif [ $num = '2' ]; then
     source build/envsetup.sh
     repopick -t thirteen-udfps
-}
 
-function sync_device {
-	rm -rf device/xiaomi/
+    elif [ $num = '3' ]; then
+    rm -rf device/xiaomi/
 	rm -rf vendor/xiaomi/
 	rm -rf kernel/xiaomi/
 	git clone https://github.com/penglezos/device_xiaomi_raphael device/xiaomi/raphael
 	git clone https://github.com/penglezos/vendor_xiaomi_raphael vendor/xiaomi/raphael
 	git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
-}
-
-function build {
-	#ccache -M 50G
+    
+	elif [ $num = '4' ]; then
+    #ccache -M 50G
 	export USE_CCACHE=1
 	#export CCACHE_EXEC=$(command -v ccache)
 	export LC_ALL=C
@@ -29,85 +41,11 @@ function build {
 	source build/envsetup.sh
 	lunch arrow_raphael-userdebug
 	make bacon
-}
-
-echo "Android ROM build script"
-echo
-
-while read -p "Do you want to sync rom (y/n)? " cchoice
-do
-case "$cchoice" in
-	y|Y )
-		sync_rom
-		break
-		;;
-	n|N )
-		break
-		;;
-	* )
-		echo
-		echo "Invalid try again!"
-		echo
-		;;
-esac
-done
-
-echo
-
-while read -p "Do you want to pick changes (y/n)? " cchoice
-do
-case "$cchoice" in
-	y|Y )
-		repo_pick
-		break
-		;;
-	n|N )
-		break
-		;;
-	* )
-		echo
-		echo "Invalid try again!"
-		echo
-		;;
-esac
-done
-
-echo
-
-while read -p "Do you want to sync device trees (y/n)? " cchoice
-do
-case "$cchoice" in
-	y|Y )
-		sync_device
-		break
-		;;
-	n|N )
-		break
-		;;
-	* )
-		echo
-		echo "Invalid try again!"
-		echo
-		;;
-esac
-done
-
-echo
-
-while read -p "Do you want to build ROM (y/n)? " cchoice
-do
-case "$cchoice" in
-	y|Y )
-		build
-		break
-		;;
-	n|N )
-		break
-		;;
-	* )
-		echo
-		echo "Invalid try again!"
-		echo
-		;;
-esac
-done
+    
+	elif [ $num = '5' ]; then
+    source build/envsetup.sh
+	lunch arrow_raphael-userdebug
+    make bootimage
+    
+	else echo "Invalid input, aborting!"
+fi
