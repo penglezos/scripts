@@ -89,9 +89,9 @@ function merge_qca_wifi_host_cmn() {
     fi
 }
 
-# techpack
+# techpack-audio
 function merge_techpack() {
-    echo "Merging techpack"
+    echo "Merging techpack-audio"
     if ! git remote add techpack https://git.codelinaro.org/clo/la/platform/vendor/opensource/audio-kernel; then
         git remote rm techpack
         git remote add techpack https://git.codelinaro.org/clo/la/platform/vendor/opensource/audio-kernel
@@ -102,18 +102,18 @@ function merge_techpack() {
     if [[ ${INITIAL_MERGE} = true ]]; then
         git merge -s ours --no-commit --allow-unrelated-histories FETCH_HEAD
         git read-tree --prefix=techpack/audio -u FETCH_HEAD
-        git commit -m "techpack: Merge tag '$TAG'"
-        echo "Merged techpack tag succesfully!"
+        git commit -m "techpack-audio: Merge tag '$TAG'"
+        echo "Merged techpack-audio tag succesfully!"
     else
         if ! git merge -X subtree=techpack/audio FETCH_HEAD --log; then
             echo "Merge failed!" && exit 1
         else
-            echo "Merged techpack tag sucessfully!"
+            echo "Merged techpack-audio tag sucessfully!"
         fi
     fi
 }
 
-# techpack
+# techpack-data
 function merge_techpack_data() {
     echo "Merging techpack data"
     if ! git remote add techpack-data https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/data-kernel; then
