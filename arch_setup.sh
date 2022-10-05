@@ -43,9 +43,3 @@ git config --global alias.cp 'cherry-pick'
 git config --global alias.r 'revert'
 git config --global alias.rc 'revert --no-commit'
 
-# Set swap
-sudo swapoff -a
-sudo dd if=/dev/zero of=/swapfile bs=1G count=16
-sudo mkswap /swapfile
-sudo swapon /swapfile
-
