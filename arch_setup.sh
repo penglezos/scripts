@@ -6,16 +6,6 @@
 #	./arch_setup.sh
 #
 
-# Git profile configuration
-git config --global user.name "penglezos"
-git config --global user.email "panagiotisegl@gmail.com"
-git config --global review.review.arrowos.net.username "penglezos"
-
-# Git alias configuration
-git config --global alias.cp 'cherry-pick'
-git config --global alias.r 'revert'
-git config --global alias.rc 'revert --no-commit'
-
 # Install necessary packages
 sudo pacman -S bluez bluez-utils blueman firefox git code htop neofetch telegram-desktop
 
@@ -30,6 +20,16 @@ makepkg -si
 
 # AUR packages
 sudo yay -S google-chrome chrome-gnome-shell spotify
+
+# Git profile configuration
+git config --global user.name "penglezos"
+git config --global user.email "panagiotisegl@gmail.com"
+git config --global review.review.arrowos.net.username "penglezos"
+
+# Git alias configuration
+git config --global alias.cp 'cherry-pick'
+git config --global alias.r 'revert'
+git config --global alias.rc 'revert --no-commit'
 
 # Set swap
 sudo swapoff -a
