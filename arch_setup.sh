@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# Script to setup Arch Linux personal configuration
+#
+# Usage:
+#	./arch_setup.sh
+#
 
 # Git profile configuration
 git config --global user.name "penglezos"
