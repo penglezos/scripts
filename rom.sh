@@ -21,7 +21,8 @@ if [ $num = '1' ]; then
 
     elif [ $num = '2' ]; then
     source build/envsetup.sh
-
+    repopick 342236
+    
     elif [ $num = '3' ]; then
     rm -rf device/xiaomi/
     rm -rf vendor/xiaomi/
