@@ -10,6 +10,7 @@ echo    "         Android Build script                  "
 echo -e "==============================================="
 echo -e
 echo -e "Available options:\n1.Sync ROM\n2.Pick gerrit changes\n3.Sync device trees\n4.Build ROM\n5.Build Kernel"
+echo -e
 read -p "Your choice: " num
 case $num in 
     1|2|3|4|5)
