@@ -27,7 +27,9 @@ makepkg -si
 sudo yay -S \
     google-chrome \
     chrome-gnome-shell \
-    spotify
+    spotify \
+    android-studio \
+    android-sdk
 
 # Enable bluetooth service
 sudo systemctl start bluetooth.service
