@@ -18,7 +18,7 @@ esac
 if [ $num = '1' ]; then
     repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-
+    
     elif [ $num = '2' ]; then
     source build/envsetup.sh
     repopick 342236
@@ -33,21 +33,20 @@ if [ $num = '1' ]; then
     git clone https://github.com/penglezos/vendor_xiaomi_raphael vendor/xiaomi/raphael
     git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
     
-	elif [ $num = '4' ]; then
-  
-  #ccache -M 50G
-	export USE_CCACHE=1
-	#export CCACHE_EXEC=$(command -v ccache)
-	export LC_ALL=C
-	#export SELINUX_IGNORE_NEVERALLOWS=true
-	source build/envsetup.sh
-	lunch lineage_raphael-userdebug
-	make bacon
-    
-	elif [ $num = '5' ]; then
+    elif [ $num = '4' ]; then
+    #ccache -M 50G
+    export USE_CCACHE=1
+    #export CCACHE_EXEC=$(command -v ccache)
+    export LC_ALL=C
+    #export SELINUX_IGNORE_NEVERALLOWS=true
     source build/envsetup.sh
-	lunch lineage_raphael-userdebug
+    lunch lineage_raphael-userdebug
+    make bacon
+    
+    elif [ $num = '5' ]; then
+    source build/envsetup.sh
+    lunch lineage_raphael-userdebug
     make bootimage
     
-	else echo "Invalid input, aborting!"
+    else echo "Invalid input, aborting!"
 fi
