@@ -9,11 +9,11 @@ echo -e "==============================================="
 echo    "         Android Build script                  "
 echo -e "==============================================="
 echo -e
-echo -e "Available options:\n1.Sync ROM\n2.Pick gerrit changes\n3.Sync device trees\n4.Build ROM\n5.Build Kernel"
+echo -e "Available options:\n1.Sync ROM\n2.Pick gerrit changes\n3.Build ROM\n4.Build Kernel"
 echo -e
 read -p "Your choice: " num
 case $num in 
-    1|2|3|4|5)
+    1|2|3|4)
 esac
 
 if [ $num = '1' ]; then
@@ -27,14 +27,6 @@ if [ $num = '1' ]; then
     repopick 343784
     
     elif [ $num = '3' ]; then
-    rm -rf device/xiaomi/
-    rm -rf vendor/xiaomi/
-    rm -rf kernel/xiaomi/
-    git clone https://github.com/penglezos/device_xiaomi_raphael device/xiaomi/raphael
-    git clone https://github.com/penglezos/vendor_xiaomi_raphael vendor/xiaomi/raphael
-    git clone https://github.com/penglezos/kernel_xiaomi_raphael kernel/xiaomi/raphael
-    
-    elif [ $num = '4' ]; then
     #ccache -M 50G
     export USE_CCACHE=1
     #export CCACHE_EXEC=$(command -v ccache)
@@ -44,7 +36,7 @@ if [ $num = '1' ]; then
     lunch lineage_raphael-userdebug
     make bacon
     
-    elif [ $num = '5' ]; then
+    elif [ $num = '4' ]; then
     source build/envsetup.sh
     lunch lineage_raphael-userdebug
     make bootimage
