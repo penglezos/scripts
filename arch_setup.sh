@@ -38,7 +38,7 @@ sudo systemctl enable bluetooth.service
 # Git profile configuration
 git config --global user.name "penglezos"
 git config --global user.email "panagiotisegl@gmail.com"
-git config --global review.review.arrowos.net.username "penglezos"
+git config --global review.review.lineageos.org.username "englezos"
 
 # Git alias configuration
 git config --global alias.cp 'cherry-pick'
