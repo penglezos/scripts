@@ -22,7 +22,7 @@ if [ $num = '1' ]; then
     
     elif [ $num = '2' ]; then
     source build/envsetup.sh
-    repopick 342236
+    repopick -t secure-tiles
     repopick 343780
     repopick 343784
     repopick 344228
