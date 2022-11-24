@@ -27,7 +27,6 @@ if [ $num = '1' ]; then
     repopick 343784
     repopick 344228
     repopick 344230
-    repopick 344229
     
     elif [ $num = '3' ]; then
     #ccache -M 50G
