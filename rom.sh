@@ -5,6 +5,8 @@
 # Android Build script 
 #
 
+device='raphael'
+
 echo -e "==============================================="
 echo    "         Android Build script                  "
 echo -e "==============================================="
@@ -36,12 +38,12 @@ if [ $num = '1' ]; then
     export LC_ALL=C
     #export SELINUX_IGNORE_NEVERALLOWS=true
     source build/envsetup.sh
-    lunch lineage_raphael-userdebug
+    lunch lineage_${device}-userdebug
     make bacon
     
     elif [ $num = '4' ]; then
     source build/envsetup.sh
-    lunch lineage_raphael-userdebug
+    lunch lineage_${device}-userdebug
     make bootimage
     
     else echo "Invalid input, aborting!"
