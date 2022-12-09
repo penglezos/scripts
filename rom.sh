@@ -44,6 +44,7 @@ if [ $num = '1' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
     make bootimage
-    
+    cp out/target/product/"${device}"/boot.img ~/
+
     else echo "Invalid input, aborting!"
 fi
