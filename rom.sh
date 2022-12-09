@@ -36,7 +36,6 @@ if [ $num = '1' ]; then
     export USE_CCACHE=1
     ccache -M 50G
     export LC_ALL=C
-    #export SELINUX_IGNORE_NEVERALLOWS=true
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
     make bacon
