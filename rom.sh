@@ -29,9 +29,10 @@ if [ $num = '1' ]; then
     repopick 344230
     
     elif [ $num = '3' ]; then
-    #ccache -M 50G
+    export CCACHE_EXEC=$(command -v ccache)
+    export CCACHE_DIR=$(pwd)/.ccache
     export USE_CCACHE=1
-    #export CCACHE_EXEC=$(command -v ccache)
+    ccache -M 50G
     export LC_ALL=C
     #export SELINUX_IGNORE_NEVERALLOWS=true
     source build/envsetup.sh
