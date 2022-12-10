@@ -28,6 +28,7 @@ if [ $num = '1' ]; then
     repopick 343780
     repopick 343784
     repopick 344228
+    repopick -f 335763
     
     elif [ $num = '3' ]; then
     export CCACHE_EXEC=$(command -v ccache)
