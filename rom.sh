@@ -39,7 +39,8 @@ if [ $num = '1' ]; then
     lunch lineage_${device}-userdebug
     make bacon
     cp out/target/product/"${device}"/lineage-*-"${device}".zip ~/
-
+    cp out/target/product/"${device}"/recovery.img ~/
+    
     elif [ $num = '4' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
