@@ -7,6 +7,7 @@
 #
 
 # Install necessary packages
+echo -e "Installing packages...\n"
 sudo pacman -S \
     base-devel \
     bluez \
@@ -20,11 +21,13 @@ sudo pacman -S \
     telegram-desktop
 
 # Install yay
+echo -e "Installing yay...\n"
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
 # AUR packages
+echo -e "Installing yay packages...\n"
 sudo yay -S \
     google-chrome \
     chrome-gnome-shell \
@@ -33,15 +36,18 @@ sudo yay -S \
     android-sdk
 
 # Enable bluetooth service
+echo -e "Enabling bluetooth service...\n"
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 
 # Git profile configuration
+echo -e "Configuring git profile...\n"
 git config --global user.name "penglezos"
 git config --global user.email "panagiotisegl@gmail.com"
 git config --global review.review.lineageos.org.username "englezos"
 
 # Git alias configuration
+echo -e "Configuring git alias shortcuts...\n"
 git config --global alias.cp 'cherry-pick'
 git config --global alias.r 'revert'
 git config --global alias.rc 'revert --no-commit'
