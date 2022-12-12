@@ -8,6 +8,7 @@
 
 # Install necessary packages
 sudo pacman -S \
+    base-devel \
     bluez \
     bluez-utils \
     blueman \
