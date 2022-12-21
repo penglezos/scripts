@@ -11,7 +11,7 @@ echo -e "==============================================="
 echo    "         Android Build script                  "
 echo -e "==============================================="
 echo -e
-echo -e "Available options:\n1.Sync ROM\n2.Pick gerrit changes\n3.Build ROM\n4.Build Kernel"
+echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Build ROM\n4.Build Kernel"
 echo -e
 read -p "Your choice: " num
 case $num in 
@@ -23,12 +23,7 @@ if [ $num = '1' ]; then
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
     
     elif [ $num = '2' ]; then
-    source build/envsetup.sh
-    repopick -t secure-tiles
-    repopick 343780
-    repopick 343784
-    repopick 344228
-    repopick -f 335763
+    ./apply.sh
     
     elif [ $num = '3' ]; then
     export CCACHE_EXEC=$(command -v ccache)
