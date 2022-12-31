@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2019-2022 penglezos <panagiotisegl@gmail.com>
+# Copyright (C) 2019-2023 penglezos <panagiotisegl@gmail.com>
 #
 # Android Build script 
 #
