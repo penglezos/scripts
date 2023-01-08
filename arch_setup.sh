@@ -51,4 +51,4 @@ echo -e "Configuring git alias shortcuts...\n"
 git config --global alias.cp 'cherry-pick'
 git config --global alias.r 'revert'
 git config --global alias.rc 'revert --no-commit'
-
+git config --global core.editor "nano"
