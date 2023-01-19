@@ -11,11 +11,11 @@ echo -e "==============================================="
 echo    "         Android Build script                  "
 echo -e "==============================================="
 echo -e
-echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Build ROM\n4.Build Kernel"
+echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Set zram\n4.Build ROM\n5.Build Kernel"
 echo -e
 read -p "Your choice: " num
 case $num in 
-    1|2|3|4)
+    1|2|3|4|5)
 esac
 
 if [ $num = '1' ]; then
@@ -26,6 +26,12 @@ if [ $num = '1' ]; then
     ./apply.sh
     
     elif [ $num = '3' ]; then
+    sudo swapoff --all
+    sudo bash -c "echo 32G > /sys/block/zram0/disksize"
+    sudo mkswap --label zram0 /dev/zram0
+    sudo swapon --priority 32767 /dev/zram0
+
+    elif [ $num = '4' ]; then
     export CCACHE_EXEC=$(command -v ccache)
     export CCACHE_DIR=$(pwd)/.ccache
     export USE_CCACHE=1
@@ -37,7 +43,7 @@ if [ $num = '1' ]; then
     cp out/target/product/"${device}"/lineage-*-"${device}".zip ~/
     cp out/target/product/"${device}"/recovery.img ~/
     
-    elif [ $num = '4' ]; then
+    elif [ $num = '5' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
     make bootimage
