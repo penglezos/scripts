@@ -11,11 +11,11 @@ echo -e "==============================================="
 echo    "         Android Build script                  "
 echo -e "==============================================="
 echo -e
-echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Set zram\n4.Build ROM\n5.Build Kernel"
+echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Set zram\n4.Build ROM\n5.Build Kernel\n6.Build recovery"
 echo -e
 read -p "Your choice: " num
 case $num in 
-    1|2|3|4|5)
+    1|2|3|4|5|6)
 esac
 
 if [ $num = '1' ]; then
@@ -48,6 +48,11 @@ if [ $num = '1' ]; then
     lunch lineage_${device}-userdebug
     make bootimage
     cp out/target/product/"${device}"/boot.img ~/
-
+    
+    elif [ $num = '6' ]; then
+    source build/envsetup.sh
+    lunch lineage_${device}-userdebug
+    make recoveryimage
+    cp out/target/product/"${device}"/recovery.img ~/
     else echo "Invalid input, aborting!"
 fi
