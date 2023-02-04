@@ -6,6 +6,7 @@
 #
 
 device='raphael'
+build_type='userdebug'
 
 echo -e "==============================================="
 echo    "         Android Build script                  "
@@ -38,17 +39,17 @@ if [ $num = '1' ]; then
     ccache -M 50G
     export LC_ALL=C
     source build/envsetup.sh
-    lunch lineage_${device}-userdebug
+    lunch lineage_${device}-${build_type}
     make bacon
     
     elif [ $num = '5' ]; then
     source build/envsetup.sh
-    lunch lineage_${device}-userdebug
+    lunch lineage_${device}-${build_type}
     make bootimage
     
     elif [ $num = '6' ]; then
     source build/envsetup.sh
-    lunch lineage_${device}-userdebug
+    lunch lineage_${device}-${build_type}
     make recoveryimage
 
     else echo "Invalid input, aborting!"
