@@ -47,7 +47,8 @@ if [ $num = '1' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make bootimage
-    
+    mv boot.img englezos-${date}-kernel-${device}.img
+
     elif [ $num = '6' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
