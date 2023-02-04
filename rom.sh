@@ -40,19 +40,16 @@ if [ $num = '1' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
     make bacon
-    cp out/target/product/"${device}"/lineage-*-"${device}".zip ~/
-    cp out/target/product/"${device}"/recovery.img ~/
     
     elif [ $num = '5' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
     make bootimage
-    cp out/target/product/"${device}"/boot.img ~/
     
     elif [ $num = '6' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-userdebug
     make recoveryimage
-    cp out/target/product/"${device}"/recovery.img ~/
+
     else echo "Invalid input, aborting!"
 fi
