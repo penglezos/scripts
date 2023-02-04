@@ -7,6 +7,7 @@
 
 device='raphael'
 build_type='userdebug'
+date=`date +"%Y%m%d"`
 
 echo -e "==============================================="
 echo    "         Android Build script                  "
@@ -51,6 +52,7 @@ if [ $num = '1' ]; then
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make recoveryimage
+    mv recovery.img lineage-20.0-${date}-recovery-${device}.img
 
     else echo "Invalid input, aborting!"
 fi
