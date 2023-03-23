@@ -17,7 +17,7 @@ echo -e "Available options:\n1.Sync ROM\n2.Set zram\n3.Build ROM\n4.Build Kernel
 echo -e
 read -p "Your choice: " num
 case $num in 
-    1|2|3|4|5|6)
+    1|2|3|4|5)
 esac
 
 if [ $num = '1' ]; then
