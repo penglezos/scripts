@@ -21,7 +21,7 @@ case $num in
 esac
 
 if [ $num = '1' ]; then
-    repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
+    repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
     
     elif [ $num = '2' ]; then
