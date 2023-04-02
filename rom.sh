@@ -13,7 +13,8 @@ echo -e "==============================================="
 echo    "         Android Build script                  "
 echo -e "==============================================="
 echo -e
-echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Set zram\n4.Build ROM\n5.Build Kernel\n6.Build recovery"echo -e
+echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Set zram\n4.Build ROM\n5.Build Kernel\n6.Build recovery"
+echo -e
 read -p "Your choice: " num
 case $num in 
     1|2|3|4|5|6)
