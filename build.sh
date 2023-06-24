@@ -7,7 +7,6 @@
 
 device='raphael'
 build_type='userdebug'
-date=`date +"%Y%m%d"`
 
 sync () {
     repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
@@ -64,7 +63,6 @@ elif [ $num = '2' ]; then
     ./patches.sh
 elif [ $num = '3' ]; then
     setup
-
 elif [ $num = '4' ]; then
     build
 elif [ $num = '5' ]; then
