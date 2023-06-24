@@ -16,4 +16,5 @@ cd ../../
 cd vendor/lineage
 git fetch https://github.com/EnglezosAOSP/android_vendor_lineage
 git cherry-pick 25535f0
+git cherry-pick 3198623
 cd ../../
