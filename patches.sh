@@ -43,22 +43,24 @@ cd ../../
 cd packages/apps/Settings
 git fetch https://github.com/EnglezosAOSP/android_packages_apps_Settings
 git cherry-pick 74cb3d86162f83dbef7258e2bf4255f21da90cba
-cd ../../
+cd ../../../
 
 # Connectivity
 cd packages/modules/Connectivity
 git fetch https://github.com/EnglezosAOSP/android_packages_modules_Connectivity/
 git cherry-pick 1113fdb6eee9fbac29f479a805c366465667f65c
-cd ../../
+cd ../../../
 
 # Wifi
 cd packages/modules/Wifi
 git fetch https://github.com/EnglezosAOSP/android_packages_modules_Wifi
 git cherry-pick 6d8e04ac2aa22b6b8eff5294958a4bc17ef57791
 git cherry-pick f3453559a9d93f970f542438094c7fd1da859a8f
+cd ../../../
 
 # system_core
 cd system/core
 git fetch https://github.com/EnglezosAOSP/android_system_core
 git cherry-pick a7d5e6ef3735ae46d0dbef69b2820d198069f4d2
 git cherry-pick b023047c5d6ce65b02ce378d585d84df1afa63ae
+cd ../../../
