@@ -41,3 +41,8 @@ cd ../../
 cd packages/modules/Wifi
 git fetch https://github.com/EnglezosAOSP/android_packages_modules_Wifi
 git cherry-pick 6d8e04a^..f345355
+
+# system_core
+cd system/core
+git fetch https://github.com/EnglezosAOSP/android_system_core
+git cherry-pick a7d5e6e^..b023047
