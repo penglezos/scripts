@@ -24,3 +24,9 @@ cd frameworks/base
 git fetch https://github.com/EnglezosAOSP/android_frameworks_base
 git cherry-pick b461c33^..6d509e9
 cd ../../
+
+# Settings
+cd packages/apps/Settings
+git fetch https://github.com/EnglezosAOSP/android_packages_apps_Settings
+git cherry-pick 74cb3d8
+cd ../../
