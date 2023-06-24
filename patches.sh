@@ -18,3 +18,9 @@ git fetch https://github.com/EnglezosAOSP/android_vendor_lineage
 git cherry-pick 25535f0
 git cherry-pick 3198623
 cd ../../
+
+# frameworks_base
+cd frameworks/base
+git fetch https://github.com/EnglezosAOSP/android_frameworks_base
+git cherry-pick b461c33^..6d509e9
+cd ../../
