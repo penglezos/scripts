@@ -30,3 +30,9 @@ cd packages/apps/Settings
 git fetch https://github.com/EnglezosAOSP/android_packages_apps_Settings
 git cherry-pick 74cb3d8
 cd ../../
+
+# Connectivity
+cd packages/apps/modules/Connectivity
+git fetch https://github.com/EnglezosAOSP/android_packages_modules_Connectivity/
+git cherry-pick 1113fdb
+cd ../../
