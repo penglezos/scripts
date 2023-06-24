@@ -11,3 +11,9 @@ cd build/soong
 git fetch https://github.com/EnglezosAOSP/android_build_soong/
 git cherry-pick 7e07da0^..82153b8
 cd ../../
+
+# vendor_lineage
+cd vendor/lineage
+git fetch https://github.com/EnglezosAOSP/android_vendor_lineage
+git cherry-pick 25535f0
+cd ../../
