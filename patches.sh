@@ -36,3 +36,8 @@ cd packages/apps/modules/Connectivity
 git fetch https://github.com/EnglezosAOSP/android_packages_modules_Connectivity/
 git cherry-pick 1113fdb
 cd ../../
+
+# Wifi
+cd packages/modules/Wifi
+git fetch https://github.com/EnglezosAOSP/android_packages_modules_Wifi
+git cherry-pick 6d8e04a^..f345355
