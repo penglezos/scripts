@@ -18,7 +18,6 @@ cd ../../
 cd vendor/lineage
 git fetch https://github.com/EnglezosAOSP/android_vendor_lineage
 git cherry-pick 25535f0fc42644a8f4a95220eb97745899a6e95b
-git cherry-pick 25535f0fc42644a8f4a95220eb97745899a6e95b
 cd ../../
 
 # frameworks_base
