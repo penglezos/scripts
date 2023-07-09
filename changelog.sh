@@ -62,3 +62,4 @@ sed -i 's/project/   */g' $Changelog
 
 cp $Changelog out/target/product/raphael/system/etc/
 mv $Changelog vendor/OTA/
+echo "Changelog file for device is generated."
