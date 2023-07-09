@@ -22,11 +22,11 @@ if [ -f $existingOTAjson ]; then
 	#there might be a better way to parse json yet here we try without adding more dependencies like jq
 	filename=$3
 	version=`echo "$3" | cut -d'-' -f2`
-	download="https://sourceforge.net/projects/voltage-os/files/'$device'/'$filename'/download"
+	url="https://sourceforge.net/projects/voltage-os/files/'$device'/'$filename'/download"
 	buildprop=$2/system/build.prop
 	linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
-	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
-	md5=`md5sum "$2/$3" | cut -d' ' -f1`
+	datetime=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
+	id=`md5sum "$2/$3" | cut -d' ' -f1`
 	size=`stat -c "%s" "$2/$3"`
 
 	#cleanup old file
@@ -38,9 +38,9 @@ if [ -f $existingOTAjson ]; then
 	"response": [
 		{
 			"filename": "'$filename'",
-			"download": "'download'",
-			"timestamp": '$timestamp',
-			"md5": "'$md5'",
+			"url": "'url'",
+			"datetime": '$datetime',
+			"id": "'$id'",
 			"size": '$size',
 			"version": "'$version'",
 		}
