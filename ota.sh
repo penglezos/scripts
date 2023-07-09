@@ -36,12 +36,12 @@ if [ -f $existingOTAjson ]; then
 
 	echo '{
 	"response": [
-		{
-			"filename": "'$filename'",
-			"url": "'url'",
+		{	
 			"datetime": '$datetime',
+			"filename": "'$filename'",
 			"id": "'$id'",
 			"size": '$size',
+			"url": "'url'",
 			"version": "'$version'",
 		}
 	]
