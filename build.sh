@@ -32,6 +32,8 @@ build () {
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make bacon
+    chmod +x changelog.sh
+    ./changelog.sh
 }
 
 kernel () {
