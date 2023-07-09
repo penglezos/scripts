@@ -17,8 +17,6 @@
 
 Changelog=Changelog.txt
 
-DEVICE=$1
-
 if [ -f $Changelog ];
 then
 	rm -f $Changelog
@@ -62,5 +60,5 @@ done
 
 sed -i 's/project/   */g' $Changelog
 
-cp $Changelog out/target/product/$DEVICE/system/etc/
-mv $Changelog out/target/product/$DEVICE/
+cp $Changelog out/target/product/raphael/system/etc/
+mv $Changelog out/target/product/raphael/
