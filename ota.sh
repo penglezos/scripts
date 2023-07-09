@@ -14,8 +14,8 @@
 #
 
 #$1=TARGET_DEVICE, $2=PRODUCT_OUT, $3=LINEAGE_VERSION
-existingOTAjson=./vendor/ota/$1.json
-output=./vendor/ota/$1.json
+existingOTAjson=./vendor/OTA/$1.json
+output=./vendor/OTA/$1.json
 
 if [ -f $existingOTAjson ]; then
 	#get data from already existing device json
