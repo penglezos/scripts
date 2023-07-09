@@ -60,6 +60,7 @@ esac
 if [ $num = '1' ]; then
     sync
 elif [ $num = '2' ]; then
+    chmod +x patches.sh
     ./patches.sh
 elif [ $num = '3' ]; then
     setup
