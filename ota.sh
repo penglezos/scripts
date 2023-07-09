@@ -20,9 +20,6 @@ output=./vendor/OTA/$1.json
 if [ -f $existingOTAjson ]; then
 	#get data from already existing device json
 	#there might be a better way to parse json yet here we try without adding more dependencies like jq
-	maintainer=`grep -n "\"maintainer\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
-	oem=`grep -n "\"oem\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
-	device=`grep -n "\"device\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
 	filename=$3
 	version=`echo "$3" | cut -d'-' -f2`
 	download="https://sourceforge.net/projects/voltage-os/files/'$device'/'$filename'/download"
@@ -40,9 +37,6 @@ if [ -f $existingOTAjson ]; then
 	echo '{
 	"response": [
 		{
-			"maintainer": "'$maintainer'",
-			"oem": "'$oem'",
-			"device": "'$device'",
 			"filename": "'$filename'",
 			"download": "'download'",
 			"timestamp": '$timestamp',
