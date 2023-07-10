@@ -4,7 +4,6 @@
 cd build/core
 git fetch https://github.com/EnglezosAOSP/android_build/
 git cherry-pick 5e9b6967c5a461081e39fb2fa740ce850cc628ef
-git cherry-pick 9b97998c82d1e160d9b89ad6fc11f14f843a19ec
 cd ../../
 
 # build_soong
@@ -19,8 +18,6 @@ cd ../../
 cd vendor/lineage
 git fetch https://github.com/EnglezosAOSP/android_vendor_lineage
 git cherry-pick 25535f0fc42644a8f4a95220eb97745899a6e95b
-git cherry-pick aeb44672d36aeb23e26eb960dc8d9d88e9185e0d
-git cherry-pick 87e50a65b2fb57f7ddc746bbca5bb95ba5b4ca69
 cd ../../
 
 # frameworks_base
