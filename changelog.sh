@@ -14,8 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-Changelog=Changelog.txt
+date=`date +"%Y%m%d"`
+Changelog=changelog_$date.txt
 
 if [ -f $Changelog ];
 then
