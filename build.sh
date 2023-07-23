@@ -26,7 +26,6 @@ setup () {
     export USE_CCACHE=1
     ccache -M 50G
     export LC_ALL=C
-    changelog_days=10
 }
 
 build () {
