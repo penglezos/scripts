@@ -17,6 +17,20 @@ if [[ $2 = "-i" || $2 = "--initial" ]]; then
     echo "Initial merge"
 fi
 
+# msm-4.14 kernel
+function merge_kernel() {
+    echo "Merging msm-4.14 kernel"
+    if ! git remote add msm-4.14 https://git.codelinaro.org/clo/la/kernel/msm-4.14; then
+        git remote rm msm-4.14
+        git remote add msm-4.14 https://git.codelinaro.org/clo/la/kernel/msm-4.14
+    fi
+
+    git fetch msm-4.14 $TAG
+    git merge FETCH_HEAD
+    git commit -m "msm-4.14: Merge tag '$TAG'"
+    echo "Merged msm-4.14 kernel tag succesfully!"
+}
+
 # qcacld-3.0
 function merge_qcacld() {
     echo "Merging qcacld-3.0"
@@ -138,6 +152,7 @@ function merge_techpack_data() {
 }
 
 # initialize script
+merge_kernel
 merge_qcacld
 merge_fw_api
 merge_qca_wifi_host_cmn
