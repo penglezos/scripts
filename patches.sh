@@ -44,12 +44,6 @@ git cherry-pick 13ee33f91e47dc77e6099a1d40245a90e1936c3a
 git cherry-pick d47cbccb481923ae672c248fd5dc1bed95f7c407
 cd ../../
 
-# Settings
-cd packages/apps/Settings
-git fetch https://github.com/EnglezosAOSP/android_packages_apps_Settings
-git cherry-pick 74cb3d86162f83dbef7258e2bf4255f21da90cba
-cd ../../../
-
 # NFC
 cd packages/apps/Nfc
 git fetch https://github.com/EnglezosAOSP/android_packages_apps_Nfc
