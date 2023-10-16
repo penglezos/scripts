@@ -21,13 +21,11 @@ sudo pacman -S --noconfirm \
     telegram-desktop
 
 # Install yay
-echo -e "Installing yay...\n"
-git clone https://aur.archlinux.org/yay.git
-cd yay
+echo -e "Installing yay & prefered packages\n"
+git clone https://aur.archlinux.org/yay.git && cd yay
 makepkg -si
+cd .. && rm -rf yay
 
-# AUR packages
-echo -e "Installing yay packages...\n"
 sudo yay -S --noconfirm \
     google-chrome \
     chrome-gnome-shell \
