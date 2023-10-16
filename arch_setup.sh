@@ -31,7 +31,8 @@ sudo yay -S --noconfirm \
     chrome-gnome-shell \
     spotify \
     android-studio \
-    android-sdk
+    android-sdk \
+    xampp
 
 # Enable bluetooth service
 echo -e "Enabling bluetooth service...\n"
