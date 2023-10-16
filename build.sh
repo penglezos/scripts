@@ -46,11 +46,7 @@ recovery () {
     make recoveryimage
 }
 
-echo -e "==============================================="
-echo    "         Android Build script                  "
-echo -e "==============================================="
-echo -e
-echo -e "Available options:\n1.Sync ROM\n2.Pick patches\n3.Setup enviroment\n4.Build ROM\n5.Build Kernel\n6.Build recovery"
+echo -e "\n1.Sync ROM\n2.Pick patches\n3.Setup enviroment\n4.Build ROM\n5.Build Kernel\n6.Build recovery"
 echo -e
 read -p "Your choice: " num
 case $num in 
