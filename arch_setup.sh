@@ -8,7 +8,7 @@
 
 # Install necessary packages
 echo -e "Installing packages...\n"
-sudo pacman -S \
+sudo pacman -S --noconfirm \
     base-devel \
     bluez \
     bluez-utils \
@@ -28,7 +28,7 @@ makepkg -si
 
 # AUR packages
 echo -e "Installing yay packages...\n"
-sudo yay -S \
+sudo yay -S --noconfirm \
     google-chrome \
     chrome-gnome-shell \
     spotify \
