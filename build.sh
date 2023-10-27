@@ -9,7 +9,7 @@ device='raphael'
 build_type='userdebug'
 
 sync () {
-    repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
+    repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
     rm -rf .repo/local_manifests
     mkdir -p .repo/local_manifests
     curl https://raw.githubusercontent.com/penglezos/local_manifests/lineage-20/raphael.xml -o .repo/local_manifests/lineage.xml
