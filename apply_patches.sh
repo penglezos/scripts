@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PATCHES_PATH=$PWD/build/patches/lineage-21
+PATCHES_PATH=$PWD/build/patches
 
 for project_name in $(cd "${PATCHES_PATH}"; echo */); do
         project_path="$(tr _ / <<<$project_name)"
