@@ -45,7 +45,7 @@ recovery () {
     make recoveryimage
 }
 
-echo -e "\n1.Sync ROM\n2.Apply patches\n3.Setup enviroment\n4.Build ROM\n5.Build Kernel\n6.Build recovery"
+echo -e "\n1.Sync sources\n2.Apply patches\n3.Setup enviroment\n4.Build ROM\n5.Build Kernel\n6.Build recovery"
 echo -e
 read -p "Your choice: " num
 case $num in 
