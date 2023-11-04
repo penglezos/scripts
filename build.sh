@@ -55,8 +55,8 @@ esac
 if [ $num = '1' ]; then
     sync
 elif [ $num = '2' ]; then
-    chmod +x patches.sh
-    ./patches.sh
+    chmod +x apply_patches.sh
+    ./apply_patches.sh
 elif [ $num = '3' ]; then
     setup
 elif [ $num = '4' ]; then
