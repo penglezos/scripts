@@ -11,7 +11,7 @@ build_type='userdebug'
 sync () {
     repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
     rm -rf .repo/local_manifests && mkdir -p .repo/local_manifests
-    curl https://raw.githubusercontent.com/penglezos/android/main/lineage-21-raphael.xml -o .repo/local_manifests/lineage-21-raphael.xml
+    curl https://raw.githubusercontent.com/penglezos/local_manifests/main/lineage-21-raphael.xml -o .repo/local_manifests/lineage-21-raphael.xml
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 }
 
