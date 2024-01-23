@@ -15,7 +15,7 @@ sync () {
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 }
 
-setup () {
+zram () {
     sudo swapoff --all
     sudo bash -c "echo 32G > /sys/block/zram0/disksize"
     sudo mkswap --label zram0 /dev/zram0
@@ -45,7 +45,7 @@ recovery () {
     make recoveryimage
 }
 
-echo -e "\n1.Sync sources\n2.Apply patches\n3.Setup build enviroment\n4.Build ROM\n5.Build kernel\n6.Build recovery"
+echo -e "\n1.Sync sources\n2.Apply patches\n3.Setup ZRAM\n4.Build ROM\n5.Build kernel\n6.Build recovery"
 echo -e
 read -p "Your choice: " num
 case $num in 
@@ -58,7 +58,7 @@ elif [ $num = '2' ]; then
     chmod +x apply_patches.sh
     ./apply_patches.sh
 elif [ $num = '3' ]; then
-    setup
+    zram
 elif [ $num = '4' ]; then
     build
 elif [ $num = '5' ]; then
