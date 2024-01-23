@@ -15,6 +15,18 @@ sync () {
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 }
 
+patches () {
+    PATCHES_PATH=$PWD/patches
+
+    for project_name in $(cd "${PATCHES_PATH}"; echo */); do
+        project_path="$(tr _ / <<<$project_name)"
+
+        cd ${project_path}
+        git am "${PATCHES_PATH}"/${project_name}/*.patch
+        git am --abort &> /dev/null
+    done
+}
+
 zram () {
     sudo swapoff --all
     sudo bash -c "echo 32G > /sys/block/zram0/disksize"
@@ -54,8 +66,7 @@ esac
 if [ $num = '1' ]; then
     sync
 elif [ $num = '2' ]; then
-    chmod +x apply_patches.sh
-    ./apply_patches.sh
+    patches
 elif [ $num = '3' ]; then
     zram
 elif [ $num = '4' ]; then
