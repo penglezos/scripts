@@ -15,6 +15,13 @@ sync () {
     repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 }
 
+zram () {
+    sudo swapoff --all
+    sudo bash -c "echo 32G > /sys/block/zram0/disksize"
+    sudo mkswap --label zram0 /dev/zram0
+    sudo swapon --priority 32767 /dev/zram0
+}
+
 patches () {
     PATCHES_PATH=$PWD/patches
 
@@ -25,13 +32,6 @@ patches () {
         git am "${PATCHES_PATH}"/${project_name}/*.patch
         git am --abort &> /dev/null
     done
-}
-
-zram () {
-    sudo swapoff --all
-    sudo bash -c "echo 32G > /sys/block/zram0/disksize"
-    sudo mkswap --label zram0 /dev/zram0
-    sudo swapon --priority 32767 /dev/zram0
 }
 
 build () {
@@ -56,7 +56,7 @@ recovery () {
     make recoveryimage
 }
 
-echo -e "\n1.Sync sources\n2.Apply patches\n3.Setup ZRAM\n4.Build ROM\n5.Build kernel\n6.Build recovery"
+echo -e "\n1.Sync sources\n2.Setup ZRAM\n3.Apply patches\n4.Build ROM\n5.Build kernel\n6.Build recovery"
 echo -e
 read -p "Your choice: " num
 case $num in 
@@ -66,9 +66,9 @@ esac
 if [ $num = '1' ]; then
     sync
 elif [ $num = '2' ]; then
-    patches
-elif [ $num = '3' ]; then
     zram
+elif [ $num = '3' ]; then
+    patches
 elif [ $num = '4' ]; then
     build
 elif [ $num = '5' ]; then
