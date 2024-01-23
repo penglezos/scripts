@@ -20,14 +20,14 @@ setup () {
     sudo bash -c "echo 32G > /sys/block/zram0/disksize"
     sudo mkswap --label zram0 /dev/zram0
     sudo swapon --priority 32767 /dev/zram0
+}
+
+build () {
     export CCACHE_EXEC=$(command -v ccache)
     export CCACHE_DIR=$(pwd)/.ccache
     export USE_CCACHE=1
     ccache -M 50G
     export LC_ALL=C
-}
-
-build () {
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make bacon
