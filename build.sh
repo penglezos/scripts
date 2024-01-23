@@ -27,7 +27,6 @@ build () {
     export CCACHE_DIR=$(pwd)/.ccache
     export USE_CCACHE=1
     ccache -M 50G
-    export LC_ALL=C
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make bacon
