@@ -23,15 +23,20 @@ zram () {
 }
 
 patches () {
+    . build/envsetup.sh
+    croot
+    
     PATCHES_PATH=$PWD/patches
 
     for project_name in $(cd "${PATCHES_PATH}"; echo */); do
         project_path="$(tr _ / <<<$project_name)"
 
-        cd ${project_path}
-        git am "${PATCHES_PATH}"/${project_name}/*.patch
+        cd $(gettop)/${project_path}
+        git am "${PATCHES_PATH}"/${project_name}/*.patch --no-gpg-sign
         git am --abort &> /dev/null
     done
+
+    croot
 }
 
 build () {
