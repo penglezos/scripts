@@ -50,12 +50,20 @@ build () {
 }
 
 kernel () {
+    export CCACHE_EXEC=$(command -v ccache)
+    export CCACHE_DIR=$(pwd)/.ccache
+    export USE_CCACHE=1
+    ccache -M 50G
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make bootimage
 }
 
 recovery () {
+    export CCACHE_EXEC=$(command -v ccache)
+    export CCACHE_DIR=$(pwd)/.ccache
+    export USE_CCACHE=1
+    ccache -M 50G
     source build/envsetup.sh
     lunch lineage_${device}-${build_type}
     make recoveryimage
