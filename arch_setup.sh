@@ -33,7 +33,8 @@ sudo yay -S --noconfirm \
     android-studio \
     android-sdk \
     xampp \
-    android-apktool
+    android-apktool \
+    aosp-devel
 
 # Enable bluetooth service
 echo -e "Enabling bluetooth service...\n"
