@@ -32,7 +32,8 @@ sudo yay -S --noconfirm \
     spotify \
     android-studio \
     android-sdk \
-    xampp
+    xampp \
+    android-apktool
 
 # Enable bluetooth service
 echo -e "Enabling bluetooth service...\n"
