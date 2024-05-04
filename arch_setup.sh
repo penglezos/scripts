@@ -31,6 +31,7 @@ sudo yay -S --noconfirm \
     google-chrome \
     gnome-browser-connector \
     spotify \
+    android-tools \
     android-studio \
     android-sdk \
     xampp \
