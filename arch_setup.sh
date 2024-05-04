@@ -36,7 +36,8 @@ sudo yay -S --noconfirm \
     android-sdk \
     xampp \
     android-apktool \
-    aosp-devel
+    aosp-devel \
+    anydesk-bin
 
 # Enable bluetooth service
 echo -e "Enabling bluetooth service...\n"
