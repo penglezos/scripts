@@ -28,7 +28,7 @@ cd .. && rm -rf yay
 
 sudo yay -S --noconfirm \
     google-chrome \
-    chrome-gnome-shell \
+    gnome-browser-connector \
     spotify \
     android-studio \
     android-sdk \
