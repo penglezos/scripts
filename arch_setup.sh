@@ -1,9 +1,10 @@
 #!/bin/bash
 #
-# Script to setup Arch Linux personal configuration
+# Copyright (C) 2022-2024 Panagiotis Englezos <panagiotisegl@gmail.com>
 #
-# Usage:
-#	./arch_setup.sh
+# SPDX-License-Identifier: Apache-2.0
+#
+# Script to setup Arch Linux personal configuration
 #
 
 # Install necessary packages
