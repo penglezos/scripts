@@ -19,7 +19,8 @@ sudo pacman -S --noconfirm \
     code \
     htop \
     neofetch \
-    telegram-desktop
+    telegram-desktop \
+    powertop
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
