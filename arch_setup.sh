@@ -10,6 +10,7 @@
 # Install necessary packages
 echo -e "Installing packages...\n"
 sudo pacman -S --noconfirm \
+    android-tools \
     base-devel \
     bluez \
     bluez-utils \
@@ -31,7 +32,8 @@ sudo pacman -S --noconfirm \
     gimp \
     npm \
     nodejs \
-    ntfs-3g
+    ntfs-3g \
+    gnome-browser-connector
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
@@ -41,9 +43,7 @@ cd .. && rm -rf yay
 
 sudo yay -S --noconfirm \
     google-chrome \
-    gnome-browser-connector \
     spotify \
-    android-tools \
     android-studio \
     android-sdk \
     xampp \
