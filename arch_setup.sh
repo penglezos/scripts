@@ -30,7 +30,8 @@ sudo pacman -S --noconfirm \
     filezilla \
     gimp \
     npm \
-    nodejs
+    nodejs \
+    ntfs-3g
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
