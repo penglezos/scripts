@@ -11,29 +11,29 @@
 echo -e "Installing packages...\n"
 sudo pacman -S --noconfirm \
     android-tools \
+    android-udev \
     base-devel \
+    blueman \
     bluez \
     bluez-utils \
-    blueman \
+    code \
+    cups \
+    cups-pdf \
+    filezilla \
     firefox \
+    gimp \
     git \
     git-lfs \
     github-cli \
-    code \
+    gnome-browser-connector \
     htop \
     neofetch \
-    telegram-desktop \
-    powertop \
-    android-udev \
-    cups \
-    cups-pdf \
-    wget \
-    filezilla \
-    gimp \
-    npm \
     nodejs \
+    npm \
     ntfs-3g \
-    gnome-browser-connector
+    powertop \
+    telegram-desktop \
+    wget
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
@@ -42,15 +42,15 @@ makepkg -si
 cd .. && rm -rf yay
 
 sudo yay -S --noconfirm \
-    google-chrome \
-    spotify \
-    android-studio \
-    android-sdk \
-    xampp \
     android-apktool \
-    aosp-devel \
+    android-sdk \
+    android-studio \
     anydesk-bin \
-    lineageos-devel
+    aosp-devel \
+    google-chrome \
+    lineageos-devel \
+    spotify \
+    xampp
 
 # Install extra GNOME packages
 if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
