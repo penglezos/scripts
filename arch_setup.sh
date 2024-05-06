@@ -35,6 +35,7 @@ sudo pacman -S --noconfirm \
     ntfs-3g \
     powertop \
     telegram-desktop \
+    virtualbox \
     wget
 
 # Install yay
