@@ -54,6 +54,7 @@ sudo yay -S --noconfirm \
     lineageos-devel \
     local-by-flywheel-bin \
     spotify \
+    stremio \
     xampp
 
 # Install extra GNOME packages
