@@ -52,6 +52,7 @@ sudo yay -S --noconfirm \
     gitkraken \
     google-chrome \
     lineageos-devel \
+    local-by-flywheel-bin \
     spotify \
     xampp
 
