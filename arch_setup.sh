@@ -16,6 +16,7 @@ sudo pacman -S --noconfirm \
     blueman \
     firefox \
     git \
+    git-lfs \
     code \
     htop \
     neofetch \
