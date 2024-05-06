@@ -24,7 +24,8 @@ sudo pacman -S --noconfirm \
     android-udev \
     cups \
     cups-pdf \
-    wget
+    wget \
+    filezilla
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
