@@ -48,6 +48,7 @@ sudo yay -S --noconfirm \
     android-studio \
     anydesk-bin \
     aosp-devel \
+    gitkraken \
     google-chrome \
     lineageos-devel \
     spotify \
