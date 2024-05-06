@@ -41,7 +41,7 @@ sudo yay -S --noconfirm \
     xampp \
     android-apktool \
     aosp-devel \
-    anydesk-bin \
+    anydesk-bin
 
 # Install extra GNOME packages
 if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
