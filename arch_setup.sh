@@ -21,6 +21,7 @@ sudo pacman -S --noconfirm \
     cups-pdf \
     filezilla \
     firefox \
+    gedit \
     gimp \
     git \
     git-lfs \
