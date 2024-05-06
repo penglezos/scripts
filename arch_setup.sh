@@ -17,6 +17,7 @@ sudo pacman -S --noconfirm \
     firefox \
     git \
     git-lfs \
+    github-cli \
     code \
     htop \
     neofetch \
