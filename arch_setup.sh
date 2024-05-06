@@ -43,6 +43,13 @@ sudo yay -S --noconfirm \
     aosp-devel \
     anydesk-bin \
 
+# Install extra GNOME packages
+if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
+    echo -e "Installing packages for GNOME...\n"
+    sudo pacman -S --no-confirm \
+        gnome-tweaks
+fi
+
 # If device is a laptop install necessary packages
 if [ -d "/proc/acpi/button/lid" ]; then
     echo -e "Installing packages for laptop...\n"
