@@ -28,7 +28,8 @@ sudo pacman -S --noconfirm \
     cups-pdf \
     wget \
     filezilla \
-    gimp
+    gimp \
+    npm
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
