@@ -29,7 +29,8 @@ sudo pacman -S --noconfirm \
     wget \
     filezilla \
     gimp \
-    npm
+    npm \
+    nodejs
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
