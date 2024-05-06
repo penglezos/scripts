@@ -28,6 +28,7 @@ sudo pacman -S --noconfirm \
     github-cli \
     gnome-browser-connector \
     htop \
+    libreoffice-still \
     neofetch \
     nodejs \
     npm \
