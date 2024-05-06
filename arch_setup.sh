@@ -21,7 +21,9 @@ sudo pacman -S --noconfirm \
     neofetch \
     telegram-desktop \
     powertop \
-    android-udev
+    android-udev \
+    cups \
+    cups-pdf
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
