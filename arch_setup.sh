@@ -41,6 +41,13 @@ sudo yay -S --noconfirm \
     aosp-devel \
     anydesk-bin \
 
+# If device is a laptop install necessary packages
+if [ -d "/proc/acpi/button/lid" ]; then
+    echo -e "Installing packages for laptop...\n"
+    sudo pacman -S --no-confirm \
+        tlp
+fi
+
 # Enable bluetooth service
 echo -e "Enabling bluetooth service...\n"
 sudo systemctl start bluetooth.service
