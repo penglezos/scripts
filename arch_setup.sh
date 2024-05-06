@@ -23,7 +23,8 @@ sudo pacman -S --noconfirm \
     powertop \
     android-udev \
     cups \
-    cups-pdf
+    cups-pdf \
+    wget
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
