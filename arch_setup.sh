@@ -36,7 +36,8 @@ sudo pacman -S --noconfirm \
     powertop \
     telegram-desktop \
     virtualbox \
-    wget
+    wget \
+    wireshark-qt
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
