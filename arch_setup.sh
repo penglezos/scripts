@@ -55,6 +55,11 @@ echo -e "Enabling bluetooth service...\n"
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 
+# Enable printer service
+echo -e "Enabling printer service...\n"
+sudo systemctl enable cups.service
+sudo systemctl start cups.service
+
 # Git profile configuration
 echo -e "Configuring git profile...\n"
 git config --global user.name "penglezos"
