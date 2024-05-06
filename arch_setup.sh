@@ -20,7 +20,8 @@ sudo pacman -S --noconfirm \
     htop \
     neofetch \
     telegram-desktop \
-    powertop
+    powertop \
+    android-udev
 
 # Install yay
 echo -e "Installing yay & prefered packages\n"
@@ -38,7 +39,7 @@ sudo yay -S --noconfirm \
     xampp \
     android-apktool \
     aosp-devel \
-    anydesk-bin
+    anydesk-bin \
 
 # Enable bluetooth service
 echo -e "Enabling bluetooth service...\n"
