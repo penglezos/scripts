@@ -9,7 +9,7 @@
 
 # Install necessary packages
 echo -e "Installing packages...\n"
-sudo pacman -S --noconfirm \
+sudo pacman -S \
     android-tools \
     android-udev \
     base-devel \
@@ -46,7 +46,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay
 makepkg -si
 cd .. && rm -rf yay
 
-sudo yay -S --noconfirm \
+sudo yay -S \
     android-apktool \
     android-sdk \
     android-studio \
@@ -63,14 +63,14 @@ sudo yay -S --noconfirm \
 # Install extra GNOME packages
 if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
     echo -e "Installing packages for GNOME...\n"
-    sudo pacman -S --no-confirm \
+    sudo pacman -S \
         gnome-tweaks
 fi
 
 # If device is a laptop install necessary packages
 if [ -d "/proc/acpi/button/lid" ]; then
     echo -e "Installing packages for laptop...\n"
-    sudo pacman -S --no-confirm \
+    sudo pacman -S \
         tlp
 fi
 
