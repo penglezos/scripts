@@ -57,8 +57,7 @@ yay -S \
     lineageos-devel \
     local-by-flywheel-bin \
     spotify \
-    stremio \
-    xampp
+    stremio
 
 # Install extra GNOME packages
 if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
