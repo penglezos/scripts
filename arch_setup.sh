@@ -46,7 +46,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay
 makepkg -si
 cd .. && rm -rf yay
 
-sudo yay -S \
+yay -S \
     android-apktool \
     android-sdk \
     android-studio \
