@@ -34,6 +34,7 @@ sudo pacman -S \
     nodejs \
     npm \
     ntfs-3g \
+    pacman-contrib \
     powertop \
     telegram-desktop \
     virtualbox \
