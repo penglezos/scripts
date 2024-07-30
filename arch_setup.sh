@@ -54,6 +54,7 @@ yay -S \
     android-studio \
     anydesk-bin \
     aosp-devel \
+    extension-manager \
     gitkraken \
     google-chrome \
     lineageos-devel \
