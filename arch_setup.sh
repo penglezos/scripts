@@ -37,6 +37,7 @@ sudo pacman -S \
     pacman-contrib \
     powertop \
     telegram-desktop \
+    veracrypt \
     virtualbox \
     wget \
     wireshark-qt
