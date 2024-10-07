@@ -61,6 +61,10 @@ yay -S \
     spotify \
     stremio
 
+# Install Brother MFC-L2800DW Printer
+git clone https://github.com/penglezos/brother-mfc-l2800dw && cd brother-mfc-l2800dw
+makepkg --install
+
 # Install extra GNOME packages
 if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
     echo -e "Installing packages for GNOME...\n"
