@@ -26,7 +26,6 @@ sudo pacman -S \
     git \
     git-lfs \
     github-cli \
-    gnome-browser-connector \
     htop \
     libreoffice-still \
     neofetch \
