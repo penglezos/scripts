@@ -59,6 +59,7 @@ yay -S \
     google-chrome \
     lineageos-devel \
     local-by-flywheel-bin \
+    onlyoffice-bin \
     spotify \
     stremio \
     ttf-ms-win11-auto
