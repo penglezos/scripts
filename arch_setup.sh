@@ -58,7 +58,8 @@ yay -S \
     lineageos-devel \
     local-by-flywheel-bin \
     spotify \
-    stremio
+    stremio \
+    ttf-ms-win11-auto
 
 # Install Brother MFC-L2800DW Printer
 git clone https://github.com/penglezos/brother-mfc-l2800dw && cd brother-mfc-l2800dw
