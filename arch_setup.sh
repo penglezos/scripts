@@ -26,6 +26,7 @@ sudo pacman -S \
     git \
     git-lfs \
     github-cli \
+    gnome-tweaks \
     htop \
     libreoffice-still \
     neofetch \
@@ -65,13 +66,6 @@ yay -S \
 # Install Brother MFC-L2800DW Printer
 git clone https://github.com/penglezos/brother-mfc-l2800dw && cd brother-mfc-l2800dw
 makepkg --install
-
-# Install extra GNOME packages
-if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
-    echo -e "Installing packages for GNOME...\n"
-    sudo pacman -S \
-        gnome-tweaks
-fi
 
 # If device is a laptop install necessary packages
 if [ -d "/proc/acpi/button/lid" ]; then
