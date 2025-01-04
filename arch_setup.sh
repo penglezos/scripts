@@ -35,6 +35,7 @@ sudo pacman -S \
     pacman-contrib \
     powertop \
     telegram-desktop \
+    ttf-roboto \
     veracrypt \
     virtualbox \
     wget \
