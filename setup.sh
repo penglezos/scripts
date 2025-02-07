@@ -62,6 +62,7 @@ yay -S \
     spotify \
     stremio \
     ttf-ms-win11-auto \
+    ventoy-bin \
     visual-studio-code-bin
 
 # Install Brother MFC-L2800DW Printer
