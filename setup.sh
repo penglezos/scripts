@@ -59,6 +59,7 @@ yay -S \
     lineageos-devel \
     local-by-flywheel-bin \
     onlyoffice-bin \
+    refine \
     spotify \
     stremio \
     ttf-ms-win11-auto \
