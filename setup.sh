@@ -53,6 +53,7 @@ yay -S \
     android-studio \
     anydesk-bin \
     aosp-devel \
+    downgrade \
     extension-manager \
     google-chrome \
     lineageos-devel \
