@@ -59,6 +59,7 @@ yay -S \
     lineageos-devel \
     local-by-flywheel-bin \
     onlyoffice-bin \
+    polychromatic \
     refine \
     spotify \
     stremio \
