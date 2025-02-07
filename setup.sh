@@ -27,6 +27,7 @@ sudo pacman -S \
     github-cli \
     gnome-tweaks \
     htop \
+    keepassxc \
     libreoffice-still \
     neofetch \
     nodejs \
