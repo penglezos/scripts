@@ -16,7 +16,6 @@ sudo pacman -S \
     blueman \
     bluez \
     bluez-utils \
-    code \
     cups \
     cups-pdf \
     filezilla \
@@ -61,7 +60,8 @@ yay -S \
     onlyoffice-bin \
     spotify \
     stremio \
-    ttf-ms-win11-auto
+    ttf-ms-win11-auto \
+    visual-studio-code-bin
 
 # Install Brother MFC-L2800DW Printer
 git clone https://github.com/penglezos/brother-mfc-l2800dw && cd brother-mfc-l2800dw
